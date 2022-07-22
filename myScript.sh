@@ -45,7 +45,6 @@ function installNodeJS(){
         echo "NodeJS already installed"
     fi
 }
-# installNodeJS;
 
 #function to install npm
 function installNPM(){
@@ -56,7 +55,6 @@ function installNPM(){
         echo "NPM already installed"
     fi
 }
-# installNPM;
 
 # function to install yarn
 function installYarn(){
@@ -67,4 +65,92 @@ function installYarn(){
         echo "Yarn already installed"
     fi
 }
-# installYarn;
+
+# install media codecs
+function installMediaCodecs(){
+    if [ -z "$(which ffmpeg)" ]; then
+        echo "Installing Media Codecs"
+        sudo $pkg install ffmpeg -y
+    else
+        echo "Media Codecs already installed"
+    fi
+}
+
+# install vlc
+function installVLC(){
+    if [ -z "$(which vlc)" ]; then
+        echo "Installing VLC"
+        sudo $pkg install vlc -y
+    else
+        echo "VLC already installed"
+    fi
+}
+
+# install telegram
+function installTelegram(){
+    if [ -z "$(which telegram-desktop)" ]; then
+        echo "Installing Telegram"
+        sudo $pkg install telegram-desktop -y
+    else
+        echo "Telegram already installed"
+    fi
+}
+
+# install obs
+function installOBS(){
+    if [ -z "$(which obs-studio)" ]; then
+        echo "Installing OBS"
+        sudo $pkg install obs-studio -y
+    else
+        echo "OBS already installed"
+    fi
+}
+
+# install gcc compiler
+function installGCC(){
+    if [ -z "$(which gcc)" ]; then
+        echo "Installing GCC"
+        sudo $pkg install gcc -y
+    else
+        echo "GCC already installed"
+    fi
+}
+# install g++ compiler
+function installGPP(){
+    if [ -z "$(which g++)" ]; then
+        echo "Installing G++"
+        sudo $pkg install g++ -y
+    else
+        echo "G++ already installed"
+    fi
+}
+
+# install mysql server
+function installMySQL(){
+    if [ -z "$(which mysql)" ]; then
+        echo "Installing MySQL"
+        sudo $pkg install mysql-server -y
+    else
+        echo "MySQL already installed"
+    fi
+}
+# install mysql client
+function installMySQLClient(){
+    if [ -z "$(which mysql)" ]; then
+        echo "Installing MySQL Client"
+        sudo $pkg install mysql-client -y
+    else
+        echo "MySQL Client already installed"
+    fi
+}
+
+# install java default jdk
+function installJava(){
+    if [ -z "$(which java)" ]; then
+        echo "Installing Java"
+        sudo $pkg install default-jdk -y
+    else
+        echo "Java already installed"
+    fi
+}
+
