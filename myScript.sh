@@ -154,3 +154,21 @@ function installJava(){
     fi
 }
 
+# install all the above programs
+function installAll(){
+    installVSCode
+    installGoogleChrome
+    installNodeJS
+    installNPM
+    installYarn
+    installMediaCodecs
+    installVLC
+    installTelegram
+    installOBS
+    installGCC
+    installGPP
+    installMySQL
+    installMySQLClient
+    installJava
+}
+installAll;
